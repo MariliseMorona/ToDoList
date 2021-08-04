@@ -1,0 +1,16 @@
+<resources>
+    <string name="text_app_name">To Do</string>
+    <string name="text_task_today">Tarefas de hoje</string>
+    <string name="hint_title_add_task">Título</string>
+    <string name="hint_description_add_task">Descrição</string>
+    <string name="hint_date_add_task">Data</string>
+    <string name="hint_hour_add_task">Horário</string>
+    <string name="text_fbt_new_task">Nova Tarefa</string>
+    <string name="text_hour_list">08:00</string>
+    <string name="text_title_list">Passear com os dogíneos</string>
+    <string name="menu_editar">Editar</string>
+    <string name="menu_delete">Deletar</string>
+    <string name="text_empty_state">Ops! Você não tem \n nenhuma tarefa !!</string>
+    <string name="text_btn_canceled_task">Cancelar</string>
+    <string name="text_btn_add_task">Adicionar</string>
+</resources>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tlb_criar_tarefa"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Criar tarefa"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdl_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dimen_32dp"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdl_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/dimen_32dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_input_titulo"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:hint="@string/hint_title_add_task"
+        app:layout_constraintStart_toStartOf="@+id/gdl_start"
+        app:layout_constraintEnd_toEndOf="@id/gdl_end"
+        app:layout_constraintTop_toBottomOf="@+id/tlb_criar_tarefa">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_input_description"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:hint="@string/hint_description_add_task"
+        app:layout_constraintStart_toStartOf="@+id/gdl_start"
+        app:layout_constraintEnd_toEndOf="@id/gdl_end"
+        app:layout_constraintTop_toBottomOf="@+id/txt_input_titulo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_input_date"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:hint="@string/hint_date_add_task"
+        app:startIconDrawable="@drawable/ic_baseline_calendar_today_24"
+        app:layout_constraintStart_toStartOf="@+id/gdl_start"
+        app:layout_constraintEnd_toStartOf="@id/txt_input_hour"
+        app:layout_constraintTop_toBottomOf="@+id/txt_input_description">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:inputType="none"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_input_hour"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_16dp"
+        android:hint="@string/hint_hour_add_task"
+        app:startIconDrawable="@drawable/ic_baseline_hourglass_top_24"
+        app:layout_constraintStart_toEndOf="@+id/txt_input_date"
+        app:layout_constraintEnd_toEndOf="@id/gdl_end"
+        app:layout_constraintTop_toBottomOf="@+id/txt_input_description">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_add_task"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/text_btn_add_task"
+        android:layout_margin="@dimen/dimen_8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/gdl_end"
+        app:layout_constraintStart_toStartOf="@+id/gdl_start" />
+
+    <Button
+        android:id="@+id/btn_canceled_task"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/text_btn_canceled_task"
+        android:layout_margin="@dimen/dimen_8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_add_task"
+        app:layout_constraintEnd_toStartOf="@+id/gdl_end"
+        app:layout_constraintStart_toStartOf="@+id/gdl_start" />
+</androidx.constraintlayout.widget.ConstraintLayout>
